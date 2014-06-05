@@ -79,7 +79,11 @@ namespace LibGit2Sharp.Core
         {
             get
             {
+#if DOT_NET_3_5
+                if (Marshal.SizeOf(typeof(IntPtr)) == 8)
+#else
                 if (Environment.Is64BitProcess)
+#endif
                 {
                     return "amd64";
                 }
