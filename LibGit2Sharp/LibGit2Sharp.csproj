@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LibGit2Sharp</RootNamespace>
     <AssemblyName>LibGit2Sharp</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -19,7 +19,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;NET40</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;DOT_NET_3_5</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
@@ -80,6 +80,9 @@
     <Compile Include="CompareOptions.cs" />
     <Compile Include="ContentChangeStats.cs" />
     <Compile Include="BuiltInFeatures.cs" />
+    <Compile Include="Core\Compat\EnumExtensions.cs" />
+    <Compile Include="Core\Compat\Lazy.cs" />
+    <Compile Include="Core\Compat\Tuple.cs" />
     <Compile Include="Core\GitCheckoutOptsWrapper.cs" />
     <Compile Include="Core\GitCredentialType.cs" />
     <Compile Include="Core\GitRevertOpts.cs" />
@@ -323,6 +326,7 @@
   <ItemGroup>
     <EmbeddedResource Include="libgit2sharp_hash.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="UniqueIdentifier.targets" />
   <PropertyGroup>
